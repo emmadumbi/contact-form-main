@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Contact form</title>
+</head>
+<body>
+  <main class="main">
+    <h1 class="title">Contact Us</h1>
+    <fieldset>
+      <section class="sectionOne">
+        <label for="firstName">First Name</label>
+        <input type="text" name="firstName" id="firstName">
+
+        <label for="lastName">Last Name</label>
+        <input type="text" name="lastName" id="lastName">
+      </section>
+
+      <section class="sectionTwo">
+        <label for="email">Email Address</label>
+        <input type="email" name="email" id="email">
+      </section>
+
+      <section class="sectionThree">
+        <p class="queryType">Query Type</p>
+        <label for="generalQuery">
+          <input type="radio" name="query" id="generalQuery">
+          General Enquiry
+        </label>
+        
+        <label for="supportquery">
+          <input type="radio" name="query" id="supportquery">
+          Support Request
+        </label>
+      </section>
+
+      <section class="sectionFour">
+        <p class="message">Message</p>
+        <textarea name="feedback" id="feedback">
+        </textarea>
+      </section>
+
+      <section class="sectionFive">
+        <input type="checkbox" name="term" id="term">
+        <label for="term">
+          I consent to being contacted by the team
+        </label>
+      </section>
+      <button type="submit" id="submitBtn">Submit</button>
+    </fieldset>
+  </main>
+  <!-- First Name
+  This field is required
+
+  Last Name
+  This field is required
+
+  Email Address
+  Please enter a valid email address
+  This field is required
+
+  Query Type
+  General Enquiry
+  Support Request
+  Please select a query type
+
+  Message
+  This field is required
+
+  I consent to being contacted by the team
+  To submit this form, please consent to being contacted
+
+  Submit
+
+  Message Sent!
+  Thanks for completing the form. We'll be in touch soon!
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+</html>
