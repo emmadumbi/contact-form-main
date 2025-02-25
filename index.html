@@ -10,19 +10,22 @@
 </head>
 <body>
   <main class="main">
-    <h1 class="title">Contact Us</h1>
-    <fieldset>
+    <form id="form" action="/">
+      <h1 class="title">Contact Us</h1>
       <section class="sectionOne">
         <label for="firstName">First Name</label>
         <input type="text" name="firstName" id="firstName">
+        <span class="errorMessage"></span>
 
         <label for="lastName">Last Name</label>
         <input type="text" name="lastName" id="lastName">
+        <span class="errorMessage"></span>
       </section>
 
       <section class="sectionTwo">
         <label for="email">Email Address</label>
         <input type="email" name="email" id="email">
+        <span class="errorMessage"></span>
       </section>
 
       <section class="sectionThree">
@@ -40,18 +43,20 @@
 
       <section class="sectionFour">
         <p class="message">Message</p>
-        <textarea name="feedback" id="feedback">
+        <textarea name="textArea" id="textArea">
         </textarea>
+        <span class="errorMessage"></span>
       </section>
 
       <section class="sectionFive">
         <input type="checkbox" name="term" id="term">
+        <span class="errorMessage"></span>
         <label for="term">
           I consent to being contacted by the team
         </label>
       </section>
       <button type="submit" id="submitBtn">Submit</button>
-    </fieldset>
+    </form>
   </main>
   <!-- First Name
   This field is required
@@ -83,5 +88,6 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
+  <script src="script.js"></script>
 </body>
 </html>

@@ -4,6 +4,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'karla', serif;
+    font-size: 1rem;
 }
 
 @font-face {
@@ -32,10 +34,6 @@
     --input-border: 1px solid hsl(186, 15%, 59%);
 }
 
-html {
-    font-family: 'karla', serif;
-}
-
 body {
     background-color: var(--Green-200-lighter);
     margin-block: 2.2rem;
@@ -43,8 +41,8 @@ body {
     justify-content: center; */
 }
 
-fieldset {
-    border: none;
+section {
+    position: relative;
 }
 
 input:not([type="radio"]):not([type="checkbox"]) {
@@ -100,12 +98,11 @@ input[type="radio"] {
     margin-block-end: 0.8rem;
 }
 
-#feedback {
+#textArea {
     width: 100%;
     height: 240px;
     border-radius: 8px;
-    resize: vertical;
-    overflow: auto;
+    padding: 0.5rem;
     margin-block-end: 2.1rem;
 }
 
@@ -130,4 +127,11 @@ button[type="submit"] {
     padding: 1.2rem;
     font-size: 18px;
     color: var(--White);
+}
+
+.errorMessage {
+    color: red;
+    position: absolute;
+    top: 90px;
+    font-size: 12px;
 }
