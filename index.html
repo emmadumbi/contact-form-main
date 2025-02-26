@@ -1,64 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Contact form</title>
-</head>
-<body>
-  <main class="main">
-    <form id="form" action="/">
-      <h1 class="title">Contact Us</h1>
-      <section class="sectionOne">
-        <label for="firstName">First Name</label>
-        <input type="text" name="firstName" id="firstName">
-        <span class="errorMessage"></span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
-        <label for="lastName">Last Name</label>
-        <input type="text" name="lastName" id="lastName">
-        <span class="errorMessage"></span>
-      </section>
+    <title>Frontend Mentor | Contact form</title>
+  </head>
+  <body>
+    <main class="main">
+      <form id="form" action="/">
+        <h1 class="title">Contact Us</h1>
 
-      <section class="sectionTwo">
-        <label for="email">Email Address</label>
-        <input type="email" name="email" id="email">
-        <span class="errorMessage"></span>
-      </section>
+        <section>
+          <div class="first_name">
+            <label for="firstName">First Name <span>*</span></label>
+            <input type="text" name="firstName" id="firstName" />
+            <p class="errorMessage"></p>
+          </div>
+          <div class="last_name">
+            <label for="lastName">Last Name <span>*</span></label>
+            <input type="text" name="lastName" id="lastName" />
+            <p class="errorMessage"></p>
+          </div>
+        </section>
 
-      <section class="sectionThree">
-        <p class="queryType">Query Type</p>
-        <label for="generalQuery">
-          <input type="radio" name="query" id="generalQuery">
-          General Enquiry
-        </label>
-        
-        <label for="supportquery">
-          <input type="radio" name="query" id="supportquery">
-          Support Request
-        </label>
-      </section>
+        <section class="email_section">
+          <label for="email">Email Address <span>*</span></label>
+          <input type="email" name="email" id="email" />
+          <p class="errorMessage"></p>
+        </section>
 
-      <section class="sectionFour">
-        <p class="message">Message</p>
-        <textarea name="textArea" id="textArea">
-        </textarea>
-        <span class="errorMessage"></span>
-      </section>
+        <section class="query_section" style="margin-bottom: 1rem">
+          <p class="queryType">Query Type <span>*</span></p>
 
-      <section class="sectionFive">
-        <input type="checkbox" name="term" id="term">
-        <span class="errorMessage"></span>
-        <label for="term">
-          I consent to being contacted by the team
-        </label>
-      </section>
-      <button type="submit" id="submitBtn">Submit</button>
-    </form>
-  </main>
-  <!-- First Name
+          <div class="query_option">
+            <label for="option1">
+              <input
+                type="radio"
+                name="userChoice"
+                value="option1"
+                id="option1"
+              />
+              General Enquiry
+            </label>
+
+            <label for="option2">
+              <input
+                type="radio"
+                name="userChoice"
+                value="option2"
+                id="option2"
+              />
+              Support Request
+            </label>
+
+            <p id="error" class="errorMessage"></p>
+          </div>
+        </section>
+
+        <section class="user_message">
+          <p class="message">Message <span>*</span></p>
+          <textarea name="textArea" id="textArea"> </textarea>
+          <p class="errorMessage"></p>
+        </section>
+
+        <section class="terms_section">
+          <div class="terms">
+            <input type="checkbox" name="term" id="term" />
+            <label for="term">
+              I consent to being contacted by the team <span>*</span></label
+            >
+          </div>
+          <p id="termError" class="errorMessage"></p>
+        </section>
+        <button type="submit" id="submitBtn">Submit</button>
+      </form>
+    </main>
+    <!-- First Name
   This field is required
 
   Last Name
@@ -88,6 +114,6 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
