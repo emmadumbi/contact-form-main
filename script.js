@@ -2,7 +2,7 @@
 const firstName = document.querySelector("#firstName");
 const lastName = document.querySelector("#lastName");
 const email = document.querySelector("#email");
-const textArea = document.querySelector("#textArea");
+const userMessage = document.querySelector("#userMessage");
 const term = document.querySelector("#term");
 const termError = document.querySelector("#termError");
 const userChoice = document.getElementsByName("userChoice");
@@ -20,7 +20,8 @@ function showError(input, message) {
   errorEl.textContent = message;
   errorEl.style.color = "hsl(0, 66%, 54%)";
   errorEl.style.fontWeight = "bold";
-  errorEl.style.fontSize = "14px";
+  errorEl.style.fontSize = "14px"; //make font size responsive
+  errorEl.style.marginTop = "0.3rem";
   input.style.borderColor = "hsl(0, 66%, 54%)";
 }
 
@@ -73,17 +74,18 @@ function validateInputs() {
     errorText.textContent = "Please select a query type";
     errorText.style.color = "hsl(0, 66%, 54%)";
     errorText.style.fontSize = "14px";
+    errorText.style.marginTop = "0.2rem";
     errorText.style.fontWeight = "bold";
   } else {
     errorText.textContent = "";
   }
 
-  const messageEl = textArea.value.trim();
+  const messageEl = userMessage.value.trim();
 
   if (messageEl === "") {
-    showError(textArea, "This field is required");
+    showError(userMessage, "This field is required");
   } else {
-    showSuccess(textArea);
+    showSuccess(userMessage);
   }
 
   let isChecked = false;

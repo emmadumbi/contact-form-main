@@ -37,7 +37,42 @@
 body {
   background-color: var(--Green-200-lighter);
   margin-block: 2.2rem;
+  padding-block: 4rem;
 }
+
+/* #successMessage {
+  position: absolute;
+  top: -8.5%;
+  left: 50%;
+  width: min(100% - 10%, 500px);
+  transform: translateX(-50%);
+  background-color: black;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+} */
 
 span {
   color: var(--Green-600-medium);
@@ -57,6 +92,7 @@ input:not([type="radio"]):not([type="checkbox"]) {
 }
 
 .main {
+  position: relative;
   width: min(100% - 10%, 1440px);
   margin-inline: auto;
   background-color: var(--White);
@@ -89,7 +125,7 @@ input[id="email"],
   row-gap: 1rem;
 }
 
-.query_option label {
+.query_label {
   display: flex;
   align-items: center;
   padding: 0.9rem 1.8rem;
@@ -104,7 +140,7 @@ input[type="radio"] {
   border: var(--input-border);
 }
 
-#textArea {
+textarea {
   width: 100%;
   height: 240px;
   border-radius: 8px;
@@ -143,9 +179,25 @@ label,
 textarea,
 button {
   cursor: pointer;
+  /* background: transparent; */
 }
 
 input:active,
-input:focus {
+input:focus,
+textarea:active,
+textarea:focus {
   outline: none;
+  background: transparent;
+}
+
+.query_label input:checked {
+  accent-color: var(--Green-600-medium);
+}
+
+.query_label:has(> input:checked) {
+  background-color: var(--Green-200-lighter);
+}
+
+input[type="checkbox"]:checked {
+  accent-color: var(--Green-600-medium);
 }

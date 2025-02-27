@@ -22,19 +22,34 @@
         <section>
           <div class="first_name">
             <label for="firstName">First Name <span>*</span></label>
-            <input type="text" name="firstName" id="firstName" />
+            <input
+              type="text"
+              name="firstName"
+              id="firstName"
+              placeholder="e.g John"
+            />
             <p class="errorMessage"></p>
           </div>
           <div class="last_name">
             <label for="lastName">Last Name <span>*</span></label>
-            <input type="text" name="lastName" id="lastName" />
+            <input
+              type="text"
+              name="lastName"
+              id="lastName"
+              placeholder="e.g Doe"
+            />
             <p class="errorMessage"></p>
           </div>
         </section>
 
         <section class="email_section">
           <label for="email">Email Address <span>*</span></label>
-          <input type="email" name="email" id="email" />
+          <input
+            type="text"
+            name="email"
+            id="email"
+            placeholder="example@email.com"
+          />
           <p class="errorMessage"></p>
         </section>
 
@@ -42,7 +57,7 @@
           <p class="queryType">Query Type <span>*</span></p>
 
           <div class="query_option">
-            <label for="option1">
+            <label class="query_label" for="option1">
               <input
                 type="radio"
                 name="userChoice"
@@ -52,7 +67,7 @@
               General Enquiry
             </label>
 
-            <label for="option2">
+            <label class="query_label" for="option2">
               <input
                 type="radio"
                 name="userChoice"
@@ -68,7 +83,11 @@
 
         <section class="user_message">
           <p class="message">Message <span>*</span></p>
-          <textarea name="textArea" id="textArea"> </textarea>
+          <textarea
+            name="userMessage"
+            id="userMessage"
+            placeholder="Enter your message here..."
+          ></textarea>
           <p class="errorMessage"></p>
         </section>
 
