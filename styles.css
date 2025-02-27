@@ -37,7 +37,7 @@
 body {
   background-color: var(--Green-200-lighter);
   margin-block: 2.2rem;
-  padding-block: 4rem;
+  /* padding-block: 4rem; */
 }
 
 /* #successMessage {
