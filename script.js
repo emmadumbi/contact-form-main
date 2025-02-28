@@ -40,7 +40,7 @@ function showSuccessMessage() {
 
   setTimeout(() => {
     successMessage.style.display = "none";
-  }, 3000);
+  }, 6000);
 
   firstName.value = "";
   lastName.value = "";
